@@ -3,6 +3,13 @@
 
     const THEMES = [
         {
+            id: 'midnight-gold',
+            name: 'Executive Midnight Gold',
+            category: 'Luxury / Financial Terminal',
+            desc: 'Deep noir obsidian background with warm champagne gold trim and status pills.',
+            swatches: ['#09090b', '#18181b', '#d97706']
+        },
+        {
             id: 'cyber-slate',
             name: 'Cyber Slate',
             category: 'Modern Dark Enterprise',
@@ -15,13 +22,6 @@
             category: 'Apple Minimalist Clean',
             desc: 'Ultra-crisp soft light canvas with frosted translucent navbar and Apple Azure Blue.',
             swatches: ['#f8fafc', '#ffffff', '#0071e3']
-        },
-        {
-            id: 'midnight-gold',
-            name: 'Executive Midnight Gold',
-            category: 'Luxury / Financial Terminal',
-            desc: 'Deep noir obsidian background with warm champagne gold trim and status pills.',
-            swatches: ['#09090b', '#18181b', '#d97706']
         },
         {
             id: 'emerald-glass',
@@ -51,7 +51,7 @@
     }
 
     function getSavedTheme() {
-        return localStorage.getItem('odoo_interface_theme') || 'cyber-slate';
+        return localStorage.getItem('odoo_interface_theme') || 'midnight-gold';
     }
 
     function updateActiveCard(currentTheme) {

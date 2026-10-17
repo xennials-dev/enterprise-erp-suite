@@ -48,16 +48,16 @@ html_content = f'''<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {{
-      --bg: #0b0f19;
-      --navbar-bg: rgba(17, 24, 39, 0.92);
-      --card-bg: rgba(17, 24, 39, 0.85);
-      --card-border: rgba(99, 102, 241, 0.22);
-      --stage-bg: rgba(15, 23, 42, 0.65);
-      --stage-border: rgba(99, 102, 241, 0.15);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --primary: #6366f1;
-      --primary-hover: #4f46e5;
+      --bg: #0c0c0e;
+      --navbar-bg: rgba(24, 24, 27, 0.95);
+      --card-bg: rgba(24, 24, 27, 0.9);
+      --card-border: rgba(245, 158, 11, 0.32);
+      --stage-bg: rgba(18, 18, 20, 0.85);
+      --stage-border: rgba(245, 158, 11, 0.2);
+      --text-main: #fafafa;
+      --text-muted: #d4d4d8;
+      --primary: #f59e0b;
+      --primary-hover: #d97706;
       --accent: #38bdf8;
       --success: #10b981;
       --warning: #f59e0b;
@@ -853,9 +853,9 @@ html_content = f'''<!DOCTYPE html>
     </div>
     <div class="header-right">
       <select class="theme-select-dropdown" id="theme-selector" onchange="switchTheme(this.value)">
+        <option value="midnight-gold" selected>🎨 Executive Midnight Gold</option>
         <option value="cyber-slate">🎨 Cyber Slate (Dark Glass)</option>
         <option value="cupertino">🎨 Cupertino (Apple Clean)</option>
-        <option value="midnight-gold">🎨 Executive Midnight Gold</option>
         <option value="emerald-glass">🎨 Emerald Fluid Glass</option>
       </select>
       <button class="btn-action-lead" onclick="openNewLeadModal()">➕ New Opportunity</button>
@@ -1447,7 +1447,7 @@ html_content = f'''<!DOCTYPE html>
       renderAppsGrid();
       renderKanban();
 
-      const savedTheme = localStorage.getItem('crm_theme') || 'cyber-slate';
+      const savedTheme = localStorage.getItem('crm_theme') || 'midnight-gold';
       document.getElementById('theme-selector').value = savedTheme;
       switchTheme(savedTheme);
     }});

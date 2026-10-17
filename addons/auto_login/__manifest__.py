@@ -11,6 +11,12 @@
         'views/ir_module_views.xml',
         'views/webclient_templates.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'auto_login/static/src/css/interface_themes.css',
+            'auto_login/static/src/js/interface_switcher.js',
+        ],
+    },
     'installable': True,
     'application': False,
     'auto_install': False,

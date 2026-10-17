@@ -10,7 +10,7 @@
             <script type="text/javascript">
                 (function() {
                     try {
-                        var savedTheme = localStorage.getItem('odoo_interface_theme') || 'cyber-slate';
+                        var savedTheme = localStorage.getItem('odoo_interface_theme') || 'midnight-gold';
                         if (savedTheme &amp;&amp; savedTheme !== 'classic') {
                             document.documentElement.setAttribute('data-theme', savedTheme);
                         }
