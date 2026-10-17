@@ -11,11 +11,13 @@ A modern, blank-canvas, white-label Enterprise Resource Planning (ERP) and busin
 
 ## 🎬 1080p Video Walkthrough & Portfolio Demo
 
+[![Enterprise ERP & Local AI Showcase](docs/images/odoo-showcase-preview.gif)](docs/videos/odoo-showcase-master.mp4)
+
 > [!TIP]
-> **Showcase MP4 Ready for Upwork & GitHub**:
-> A high-production 30-second portfolio video compiled via HyperFrames and Remotion standards showcasing all 25+ pre-activated applications, 100% on-premise AI workflows (NL-to-SQL, Smart Invoice OCR, Helpdesk Tier-1), and 4 non-destructive web interface themes.
->
-> 📹 **Download & Watch**: [`docs/videos/odoo-enterprise-showcase.mp4`](docs/videos/odoo-enterprise-showcase.mp4) *(6.2 MB, 1080p Full HD, ready for Upwork Portfolio upload and GitHub Release embedding)*
+> **Showcase Master MP4 (1080p Full HD &bull; 30s &bull; H.264 / AAC)**:
+> - 📹 **Download Master MP4**: [`docs/videos/odoo-showcase-master.mp4`](docs/videos/odoo-showcase-master.mp4) *(6.9 MB, 1920x1080, 30 fps, Stereo Audio Bed)*
+> - 🚀 **Upwork Portfolio**: Ready for direct upload (under 100MB limit, ideal 30s duration, 16:9).
+> - 🐙 **GitHub Ready**: Stream directly from repository releases or embed via HTML5 video.
 
 ---
 
@@ -243,5 +245,38 @@ To open the **Interface Switcher**, click the floating `🎨 Interface: [Active 
 
 ---
 
+## 🎥 Video Production & Portfolio Suite (HyperFrames, Remotion & Higgsfield)
+
+This repository includes a multi-engine motion graphics and video generation pipeline configured for marketing deliverables:
+
+### 1. Master Video Assets
+- **Video Path**: [`docs/videos/odoo-showcase-master.mp4`](docs/videos/odoo-showcase-master.mp4)
+- **Resolution**: 1920 × 1080 (1080p Full HD)
+- **Framerate**: 30 FPS progressive
+- **Duration**: 30.0 seconds (Optimal Upwork portfolio retention)
+- **Audio**: Multi-track synthesized stereo audio bed with synchronized sub-bass impacts, riser sweeps, and UI chimes.
+- **File Size**: 6.9 MB (Optimized for instant streaming and portfolio uploads)
+
+### 2. Upwork Portfolio Upload Guide
+When publishing this project to your **Upwork Profile Portfolio**:
+- **Project Title**: *Enterprise ERP Deployment with Direct Launch, Scoped Theming & 100% Private Local AI*
+- **Role**: *Full-Stack DevOps Engineer & Enterprise Systems Architect*
+- **Skills**: *Odoo, Python, Docker, PostgreSQL, Shell Scripting, UI/UX Design, Local LLMs (Ollama/LM Studio), Git Automation*
+- **Video Upload**: Directly upload `odoo-showcase-master.mp4` into the media gallery.
+- **Project Description**: Highlight the elimination of login friction, the 25+ pre-activated applications, the 4 custom scoped themes, and air-gapped natural language SQL and document OCR.
+
+### 3. Rendering Engines & Sources
+- **HyperFrames Engine**: Source code located in `scratch/odoo-showcase-video/index.html`. Uses deterministic GSAP timeline rendering (`npx hyperframes render`).
+- **Remotion React Suite**: Source code located in `scratch/odoo-showcase-video/remotion/`. Supports React component preview via `npm run dev` (`remotion preview src/index.ts`).
+- **Higgsfield & Cdream (SeeDream) AI B-Roll**:
+  - Connect your Higgsfield account using `higgsfield auth login`.
+  - Execute text-to-video diffusion using Cdream for cinematic 3D enterprise visual transitions:
+    ```bash
+    higgsfield generate create see-dream-v1 --prompt "Cinematic enterprise cloud server room with glowing fiber optic streams, holographic ERP dashboard floating in air, 8k resolution, photorealistic, 16:9"
+    ```
+
+---
+
 ## 📄 License
 This project is open-source under the [LGPL-3.0 License](LICENSE).
+
