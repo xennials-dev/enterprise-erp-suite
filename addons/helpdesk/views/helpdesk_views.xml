@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_helpdesk_ticket_tree" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.tree</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <list string="Helpdesk Tickets" decoration-success="stage == 'solved'" decoration-muted="stage == 'cancelled'" decoration-danger="priority == '3'">
+                <field name="priority" widget="priority"/>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+                <field name="stage" widget="badge" decoration-info="stage == 'new'" decoration-warning="stage == 'in_progress'" decoration-success="stage == 'solved'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_helpdesk_ticket_form" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <form string="Helpdesk Ticket">
+                <header>
+                    <button name="action_ai_tier1_resolution" string="🤖 Autonomous AI Resolution (Tier-1)" type="object" class="oe_highlight btn-primary"/>
+                    <button name="action_mark_solved" string="Mark Solved" type="object" invisible="stage == 'solved'" class="btn-success"/>
+                    <button name="action_mark_cancelled" string="Cancel" type="object" invisible="stage in ('solved', 'cancelled')"/>
+                    <field name="stage" widget="statusbar" statusbar_visible="new,in_progress,solved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" placeholder="Ticket Subject (e.g., Cannot connect to VPN or Invoice discrepancy)"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="partner_email"/>
+                            <field name="priority" widget="priority"/>
+                        </group>
+                        <group>
+                            <field name="user_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description" placeholder="Describe the customer issue in detail..."/>
+                        </page>
+                        <page string="🤖 AI Resolution">
+                            <field name="ai_drafted_resolution" widget="html"/>
+                            <separator string="Referenced Database Knowledge"/>
+                            <field name="past_solution_reference"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Kanban View -->
+    <record id="view_helpdesk_ticket_kanban" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.kanban</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="stage" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="stage"/>
+                <field name="priority"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title"><field name="name"/></strong>
+                                </div>
+                            </div>
+                            <div class="o_kanban_record_body">
+                                <div><field name="partner_id"/></div>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left">
+                                    <field name="priority" widget="priority"/>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="user_id" widget="many2one_avatar_user"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Window Action -->
+    <record id="action_helpdesk_tickets" model="ir.actions.act_window">
+        <field name="name">Support Tickets</field>
+        <field name="res_model">helpdesk.ticket</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first customer support ticket!
+            </p>
+            <p>
+                Use the Autonomous AI Resolution button to let local AI resolve tickets instantly.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menus -->
+    <menuitem id="menu_helpdesk_root" name="Helpdesk" sequence="25" web_icon="helpdesk,static/description/icon.png"/>
+    <menuitem id="menu_helpdesk_tickets" name="Tickets" parent="menu_helpdesk_root" action="action_helpdesk_tickets" sequence="1"/>
+</odoo>

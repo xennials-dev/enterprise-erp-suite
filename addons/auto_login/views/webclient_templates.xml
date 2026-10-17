@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Debrand layout title, web interface themes, and instant style switcher -->
+    <template id="web_layout_debrand" inherit_id="web.layout">
+        <xpath expr="//title" position="replace">
+            <title t-esc="title or 'Your Company'"/>
+        </xpath>
+        <xpath expr="//head" position="inside">
+            <!-- Early pre-paint theme initializer to prevent any flash of unstyled theme -->
+            <script type="text/javascript">
+                (function() {
+                    try {
+                        var savedTheme = localStorage.getItem('odoo_interface_theme') || 'cyber-slate';
+                        if (savedTheme &amp;&amp; savedTheme !== 'classic') {
+                            document.documentElement.setAttribute('data-theme', savedTheme);
+                        }
+                    } catch (e) {}
+
+                    function debrandTitle() {
+                        if (document.title.indexOf("Odoo") !== -1) {
+                            document.title = document.title.replace(/Odoo/g, "Your Company");
+                        }
+                    }
+                    debrandTitle();
+                    var titleEl = document.querySelector('title');
+                    if (titleEl) {
+                        var observer = new MutationObserver(debrandTitle);
+                        observer.observe(titleEl, { childList: true, characterData: true, subtree: true });
+                    }
+                })();
+            </script>
+            <!-- 4 Modern Web Interface Themes -->
+            <link rel="stylesheet" href="/auto_login/static/src/css/interface_themes.css"/>
+            <!-- Interface Switcher Component (Floating Pill + Modal Drawer) -->
+            <script type="text/javascript" src="/auto_login/static/src/js/interface_switcher.js"></script>
+        </xpath>
+    </template>
+</odoo>

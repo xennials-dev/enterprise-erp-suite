@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_ai_ocr" model="ir.ui.view">
+        <field name="name">account.move.form.ai.ocr</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_smart_ocr_invoice"
+                        string="🤖 Smart AI Invoice OCR"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="move_type not in ('in_invoice', 'in_refund') or state != 'draft'"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="🤖 Local AI OCR" invisible="move_type not in ('in_invoice', 'in_refund')">
+                    <group>
+                        <group>
+                            <field name="ai_ocr_extracted"/>
+                        </group>
+                    </group>
+                    <field name="ai_ocr_summary" placeholder="Summary of extracted OCR line items..."/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

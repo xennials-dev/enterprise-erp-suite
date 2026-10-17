@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Remove Upgrade button and show Activate button on Apps Kanban -->
+    <record id="module_view_kanban_no_upgrade" model="ir.ui.view">
+        <field name="name">ir.module.module.kanban.no.upgrade</field>
+        <field name="model">ir.module.module</field>
+        <field name="inherit_id" ref="base.module_view_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//a[contains(@href, 'odoo.com/pricing')]" position="replace"/>
+            <xpath expr="//button[@name='button_immediate_install']" position="attributes">
+                <attribute name="invisible">state != 'uninstalled'</attribute>
+                <attribute name="t-if"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Remove Upgrade button and show Activate button on Apps Form -->
+    <record id="module_form_no_upgrade" model="ir.ui.view">
+        <field name="name">ir.module.module.form.no.upgrade</field>
+        <field name="model">ir.module.module</field>
+        <field name="inherit_id" ref="base.module_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//a[contains(@href, 'odoo.com/pricing')]" position="replace"/>
+            <xpath expr="//button[@name='button_immediate_install']" position="attributes">
+                <attribute name="invisible">state != 'uninstalled'</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

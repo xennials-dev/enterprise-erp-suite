@@ -1,0 +1,363 @@
+/* ==============================================================================
+   4 Modern Enterprise Web Interface Styles for Odoo 18
+   Styles:
+   1. Cyber Slate (Modern Dark Enterprise / Obsidian Glass)
+   2. Cupertino Precision (Apple Minimalist Clean)
+   3. Executive Midnight Gold (Luxury / Financial Terminal)
+   4. Emerald Fluid Glass (Fintech Neo-Glass / BioTech)
+   5. Classic (Vanilla Default)
+   ============================================================================== */
+
+/* --------------------------------------------------------------------------
+   THEME 1: Cyber Slate (Modern Dark Enterprise)
+   -------------------------------------------------------------------------- */
+[data-theme="cyber-slate"] {
+  --o-navbar-bg: rgba(15, 23, 42, 0.94) !important;
+  --o-navbar-color: #f8fafc !important;
+  --o-navbar-border-color: rgba(255, 255, 255, 0.1) !important;
+  --o-view-bg: #0b0f19 !important;
+  --o-webclient-background: #0b0f19 !important;
+  --o-card-bg: #111827 !important;
+  --o-brand-odoo: #6366f1 !important;
+  --o-brand-primary: #6366f1 !important;
+  --o-primary-btn-bg: #6366f1 !important;
+  --o-primary-btn-border: #4f46e5 !important;
+  --o-text-color: #f3f4f6 !important;
+}
+[data-theme="cyber-slate"] body,
+[data-theme="cyber-slate"] .o_web_client,
+[data-theme="cyber-slate"] .o_action_manager,
+[data-theme="cyber-slate"] .o_content,
+[data-theme="cyber-slate"] .o_form_view,
+[data-theme="cyber-slate"] .o_kanban_view,
+[data-theme="cyber-slate"] .o_list_view {
+  background-color: #0b0f19 !important;
+  color: #f3f4f6 !important;
+}
+[data-theme="cyber-slate"] .o_navbar {
+  background: rgba(15, 23, 42, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+[data-theme="cyber-slate"] .o_control_panel {
+  background-color: #0f172a !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f3f4f6 !important;
+}
+[data-theme="cyber-slate"] .o_form_sheet {
+  background-color: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+[data-theme="cyber-slate"] .o_kanban_record,
+[data-theme="cyber-slate"] .oe_kanban_card {
+  background-color: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f3f4f6 !important;
+}
+[data-theme="cyber-slate"] table.o_list_table {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+}
+[data-theme="cyber-slate"] table.o_list_table th {
+  background-color: #0f172a !important;
+  color: #94a3b8 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+[data-theme="cyber-slate"] table.o_list_table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  color: #f1f5f9 !important;
+}
+[data-theme="cyber-slate"] .o_input,
+[data-theme="cyber-slate"] input.o_input,
+[data-theme="cyber-slate"] select.o_input,
+[data-theme="cyber-slate"] textarea.o_input {
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #f8fafc !important;
+}
+[data-theme="cyber-slate"] .breadcrumb-item,
+[data-theme="cyber-slate"] .breadcrumb-item a {
+  color: #cbd5e1 !important;
+}
+[data-theme="cyber-slate"] .btn-primary {
+  background-color: #6366f1 !important;
+  border-color: #4f46e5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 2: Cupertino Precision (Apple Minimalist Clean)
+   -------------------------------------------------------------------------- */
+[data-theme="cupertino"] {
+  --o-navbar-bg: rgba(255, 255, 255, 0.88) !important;
+  --o-navbar-color: #0f172a !important;
+  --o-navbar-border-color: rgba(0, 0, 0, 0.08) !important;
+  --o-view-bg: #f8fafc !important;
+  --o-webclient-background: #f8fafc !important;
+  --o-card-bg: #ffffff !important;
+  --o-brand-odoo: #0071e3 !important;
+  --o-brand-primary: #0071e3 !important;
+  --o-primary-btn-bg: #0071e3 !important;
+  --o-primary-btn-border: #0071e3 !important;
+  --o-text-color: #1e293b !important;
+}
+[data-theme="cupertino"] body,
+[data-theme="cupertino"] .o_web_client,
+[data-theme="cupertino"] .o_action_manager,
+[data-theme="cupertino"] .o_content {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+[data-theme="cupertino"] .o_navbar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03) !important;
+}
+[data-theme="cupertino"] .o_navbar .o_nav_entry,
+[data-theme="cupertino"] .o_navbar a {
+  color: #1e293b !important;
+}
+[data-theme="cupertino"] .o_control_panel {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+[data-theme="cupertino"] .o_form_sheet {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04) !important;
+}
+[data-theme="cupertino"] .o_kanban_record,
+[data-theme="cupertino"] .oe_kanban_card {
+  border-radius: 14px !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+[data-theme="cupertino"] .o_kanban_record:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07) !important;
+}
+[data-theme="cupertino"] .btn-primary {
+  background-color: #0071e3 !important;
+  border-color: #0071e3 !important;
+  border-radius: 20px !important;
+  font-weight: 500 !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 3: Executive Midnight Gold (Luxury / Financial Terminal)
+   -------------------------------------------------------------------------- */
+[data-theme="midnight-gold"] {
+  --o-navbar-bg: #141417 !important;
+  --o-navbar-color: #fef3c7 !important;
+  --o-navbar-border-color: #d97706 !important;
+  --o-view-bg: #09090b !important;
+  --o-webclient-background: #09090b !important;
+  --o-card-bg: #18181b !important;
+  --o-brand-odoo: #f59e0b !important;
+  --o-brand-primary: #f59e0b !important;
+  --o-primary-btn-bg: #d97706 !important;
+  --o-primary-btn-border: #b45309 !important;
+  --o-text-color: #fafaf9 !important;
+}
+[data-theme="midnight-gold"] body,
+[data-theme="midnight-gold"] .o_web_client,
+[data-theme="midnight-gold"] .o_action_manager,
+[data-theme="midnight-gold"] .o_content,
+[data-theme="midnight-gold"] .o_form_view,
+[data-theme="midnight-gold"] .o_kanban_view,
+[data-theme="midnight-gold"] .o_list_view {
+  background-color: #09090b !important;
+  color: #fafaf9 !important;
+}
+[data-theme="midnight-gold"] .o_navbar {
+  background: #141417 !important;
+  border-bottom: 2px solid #d97706 !important;
+  box-shadow: 0 4px 20px rgba(217, 119, 6, 0.2) !important;
+}
+[data-theme="midnight-gold"] .o_control_panel {
+  background-color: #141417 !important;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2) !important;
+  color: #fafaf9 !important;
+}
+[data-theme="midnight-gold"] .o_form_sheet {
+  background-color: #18181b !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+  color: #fafaf9 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7) !important;
+}
+[data-theme="midnight-gold"] .o_kanban_record,
+[data-theme="midnight-gold"] .oe_kanban_card {
+  background-color: #18181b !important;
+  border: 1px solid rgba(245, 158, 11, 0.2) !important;
+  color: #fafaf9 !important;
+}
+[data-theme="midnight-gold"] .btn-primary {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  border-color: #b45309 !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3) !important;
+}
+[data-theme="midnight-gold"] .badge,
+[data-theme="midnight-gold"] .badge-primary {
+  background-color: #78350f !important;
+  color: #fef3c7 !important;
+  border: 1px solid #d97706 !important;
+}
+
+/* --------------------------------------------------------------------------
+   THEME 4: Emerald Fluid Glass (Fintech Neo-Glass / BioTech)
+   -------------------------------------------------------------------------- */
+[data-theme="emerald-glass"] {
+  --o-navbar-bg: rgba(6, 78, 59, 0.94) !important;
+  --o-navbar-color: #ecfdf5 !important;
+  --o-navbar-border-color: rgba(16, 185, 129, 0.35) !important;
+  --o-view-bg: #022c22 !important;
+  --o-webclient-background: #022c22 !important;
+  --o-card-bg: #064e3b !important;
+  --o-brand-odoo: #10b981 !important;
+  --o-brand-primary: #10b981 !important;
+  --o-primary-btn-bg: #10b981 !important;
+  --o-primary-btn-border: #059669 !important;
+  --o-text-color: #f0fdf4 !important;
+}
+[data-theme="emerald-glass"] body,
+[data-theme="emerald-glass"] .o_web_client,
+[data-theme="emerald-glass"] .o_action_manager,
+[data-theme="emerald-glass"] .o_content,
+[data-theme="emerald-glass"] .o_form_view,
+[data-theme="emerald-glass"] .o_kanban_view,
+[data-theme="emerald-glass"] .o_list_view {
+  background-color: #022c22 !important;
+  color: #f0fdf4 !important;
+}
+[data-theme="emerald-glass"] .o_navbar {
+  background: rgba(6, 78, 59, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 4px 25px rgba(16, 185, 129, 0.25) !important;
+}
+[data-theme="emerald-glass"] .o_control_panel {
+  background-color: #064e3b !important;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.25) !important;
+  color: #f0fdf4 !important;
+}
+[data-theme="emerald-glass"] .o_form_sheet {
+  background-color: #064e3b !important;
+  border: 1px solid rgba(52, 211, 153, 0.25) !important;
+  color: #f0fdf4 !important;
+  box-shadow: 0 12px 35px rgba(2, 44, 34, 0.6) !important;
+}
+[data-theme="emerald-glass"] .o_kanban_record,
+[data-theme="emerald-glass"] .oe_kanban_card {
+  background-color: #064e3b !important;
+  border: 1px solid rgba(52, 211, 153, 0.2) !important;
+  color: #f0fdf4 !important;
+}
+[data-theme="emerald-glass"] .btn-primary {
+  background: linear-gradient(135deg, #10b981, #0d9488) !important;
+  border-color: #059669 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   THEME SWITCHER UI (Floating / Navbar Pill & Modal)
+   -------------------------------------------------------------------------- */
+#odoo-theme-switcher-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999999;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 10px 18px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#odoo-theme-switcher-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  background: rgba(30, 41, 59, 0.95);
+}
+#odoo-theme-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 1000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+#odoo-theme-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+#odoo-theme-modal {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 28px;
+  width: 580px;
+  max-width: 90vw;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.odoo-theme-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.odoo-theme-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateX(4px);
+}
+.odoo-theme-card.selected {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.15);
+}
+.odoo-theme-swatches {
+  display: flex;
+  gap: 6px;
+}
+.odoo-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

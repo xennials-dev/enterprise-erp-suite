@@ -1,0 +1,28 @@
+# Local Environment & Secrets
+.env
+*.env
+!.env.example
+
+# Docker persistent local volumes and data
+web-data/
+db-data/
+filestore/
+sessions/
+data/
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Local runtime logs & temporary files
+*.log
+cookies.txt
+.DS_Store
+Thumbs.db
+
+# Model checkpoints / heavy weights if downloaded locally
+*.gguf
+*.bin
+models/downloads/
