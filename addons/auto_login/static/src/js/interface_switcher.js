@@ -40,18 +40,22 @@
     ];
 
     function applyTheme(themeId) {
-        if (themeId && themeId !== 'classic') {
-            document.documentElement.setAttribute('data-theme', themeId);
-        } else {
-            document.documentElement.removeAttribute('data-theme');
-        }
-        localStorage.setItem('odoo_interface_theme', themeId);
-        updateActiveCard(themeId);
-        updatePillLabel(themeId);
+        // Enforce midnight-gold as premier default if classic or empty
+        const activeId = (!themeId || themeId === 'classic') ? 'midnight-gold' : themeId;
+        document.documentElement.setAttribute('data-theme', activeId);
+        document.body.setAttribute('data-theme', activeId);
+        localStorage.setItem('odoo_interface_theme', activeId);
+        updateActiveCard(activeId);
+        updatePillLabel(activeId);
     }
 
     function getSavedTheme() {
-        return localStorage.getItem('odoo_interface_theme') || 'midnight-gold';
+        const saved = localStorage.getItem('odoo_interface_theme');
+        if (!saved || saved === 'classic') {
+            localStorage.setItem('odoo_interface_theme', 'midnight-gold');
+            return 'midnight-gold';
+        }
+        return saved;
     }
 
     function updateActiveCard(currentTheme) {

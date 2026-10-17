@@ -4,31 +4,32 @@ leads = json.load(open('data/crm_leads.json', encoding='utf-8'))
 modules = json.load(open('data/installed_modules.json', encoding='utf-8'))
 channels = json.load(open('data/discuss_channels.json', encoding='utf-8'))
 
-# Key enterprise modules for the app drawer
+# Key enterprise modules matching navigation links
 app_icons = [
-    {"name": "CRM", "icon": "💼", "color": "#6366f1", "desc": "Pipeline & Deal Tracking", "url": "http://localhost:8069/odoo/crm"},
     {"name": "Discuss", "icon": "💬", "color": "#0ea5e9", "desc": "Chat & Direct Messages", "url": "http://localhost:8069/odoo/discuss"},
-    {"name": "Sales", "icon": "🏷️", "color": "#10b981", "desc": "Quotations & Orders", "url": "http://localhost:8069/odoo/sales"},
-    {"name": "Invoicing", "icon": "🧾", "color": "#f59e0b", "desc": "Invoices & Payments", "url": "http://localhost:8069/odoo/accounting"},
-    {"name": "Accounting", "icon": "📊", "color": "#8b5cf6", "desc": "Ledger & P&L Reports", "url": "http://localhost:8069/odoo/accounting"},
-    {"name": "Inventory", "icon": "📦", "color": "#ec4899", "desc": "Stock & Warehouse", "url": "http://localhost:8069/odoo/stock"},
-    {"name": "Manufacturing", "icon": "⚙️", "color": "#f97316", "desc": "BOM & Work Orders", "url": "http://localhost:8069/odoo/mrp"},
-    {"name": "Projects", "icon": "📋", "color": "#14b8a6", "desc": "Agile Kanban & Tasks", "url": "http://localhost:8069/odoo/project"},
+    {"name": "Calendar", "icon": "📅", "color": "#3b82f6", "desc": "Meeting & Event Scheduling", "url": "http://localhost:8069/odoo/calendar"},
+    {"name": "To-do", "icon": "✅", "color": "#10b981", "desc": "Personal & Team Task Lists", "url": "http://localhost:8069/odoo/action-project_todo"},
+    {"name": "Contacts", "icon": "👥", "color": "#8b5cf6", "desc": "Address Book & Customers", "url": "http://localhost:8069/odoo/contacts"},
+    {"name": "CRM", "icon": "💼", "color": "#6366f1", "desc": "Pipelines & Opportunities", "url": "http://localhost:8069/odoo/crm"},
     {"name": "Helpdesk", "icon": "🎧", "color": "#06b6d4", "desc": "Customer Support Tickets", "url": "http://localhost:8069/odoo/helpdesk"},
-    {"name": "Field Service", "icon": "🚐", "color": "#84cc16", "desc": "On-Site Maintenance", "url": "http://localhost:8069/odoo/fieldservice"},
-    {"name": "Planning", "icon": "📅", "color": "#3b82f6", "desc": "Resource Scheduling", "url": "http://localhost:8069/odoo/planning"},
+    {"name": "Sales", "icon": "🏷️", "color": "#10b981", "desc": "Quotations & Sales Orders", "url": "http://localhost:8069/odoo/sales"},
+    {"name": "Dashboards", "icon": "📊", "color": "#ec4899", "desc": "Spreadsheets & Analytics", "url": "http://localhost:8069/odoo/dashboards"},
+    {"name": "Point of Sale", "icon": "💳", "color": "#f59e0b", "desc": "Retail & Restaurant POS", "url": "http://localhost:8069/pos/ui?config_id=3"},
+    {"name": "Invoicing", "icon": "🧾", "color": "#d97706", "desc": "Customer Invoices & Bills", "url": "http://localhost:8069/odoo/accounting"},
+    {"name": "Project", "icon": "📋", "color": "#14b8a6", "desc": "Agile Kanban & Milestones", "url": "http://localhost:8069/odoo/project"},
     {"name": "Timesheets", "icon": "⏱️", "color": "#a855f7", "desc": "Time Tracking & Grid", "url": "http://localhost:8069/odoo/timesheet"},
+    {"name": "Website", "icon": "🌐", "color": "#0284c7", "desc": "Web Builder & Pages", "url": "http://localhost:8069/odoo/website"},
+    {"name": "eLearning", "icon": "🎓", "color": "#6366f1", "desc": "Courses & Certifications", "url": "http://localhost:8069/odoo/slides"},
+    {"name": "Email Marketing", "icon": "✉️", "color": "#e11d48", "desc": "Newsletters & Campaigns", "url": "http://localhost:8069/odoo/mass_mailing"},
+    {"name": "Surveys", "icon": "📝", "color": "#f97316", "desc": "Questionnaires & Feedback", "url": "http://localhost:8069/odoo/surveys"},
+    {"name": "Purchase", "icon": "🛒", "color": "#22c55e", "desc": "Vendor Orders & Agreements", "url": "http://localhost:8069/odoo/purchase"},
+    {"name": "Inventory", "icon": "📦", "color": "#ec4899", "desc": "Stock, Receipts & Transfers", "url": "http://localhost:8069/odoo/stock"},
+    {"name": "Recruitment", "icon": "👔", "color": "#8b5cf6", "desc": "Job Positions & Candidates", "url": "http://localhost:8069/odoo/recruitment"},
+    {"name": "Manufacturing", "icon": "⚙️", "color": "#f97316", "desc": "BOM & Work Orders", "url": "http://localhost:8069/odoo/mrp"},
+    {"name": "Field Service", "icon": "🚐", "color": "#84cc16", "desc": "On-Site Maintenance", "url": "http://localhost:8069/odoo/fieldservice"},
+    {"name": "Planning", "icon": "📅", "color": "#3b82f6", "desc": "Shift & Resource Planning", "url": "http://localhost:8069/odoo/planning"},
     {"name": "Sign", "icon": "✍️", "color": "#e11d48", "desc": "Online e-Signatures", "url": "http://localhost:8069/odoo/sign"},
     {"name": "Social Marketing", "icon": "📢", "color": "#38bdf8", "desc": "Multi-Platform Feeds", "url": "http://localhost:8069/odoo/social"},
-    {"name": "Automation", "icon": "⚡", "color": "#fbbf24", "desc": "Targeted Lead Campaigns", "url": "http://localhost:8069/odoo/marketing"},
-    {"name": "Studio", "icon": "🛠️", "color": "#ec4899", "desc": "Visual Customizer", "url": "http://localhost:8069/odoo/studio"},
-    {"name": "Barcode", "icon": "📱", "color": "#22c55e", "desc": "Warehouse Scanner UI", "url": "http://localhost:8069/odoo/barcode"},
-    {"name": "Appointments", "icon": "🤝", "color": "#6366f1", "desc": "Client Booking System", "url": "http://localhost:8069/odoo/appointment"},
-    {"name": "Knowledge", "icon": "📚", "color": "#0284c7", "desc": "Team Wiki & Docs", "url": "http://localhost:8069/odoo/knowledge"},
-    {"name": "VoIP", "icon": "📞", "color": "#10b981", "desc": "Dialer & Call Logging", "url": "http://localhost:8069/odoo/voip"},
-    {"name": "Subscriptions", "icon": "🔄", "color": "#8b5cf6", "desc": "Recurring Revenue", "url": "http://localhost:8069/odoo/subscription"},
-    {"name": "Quality Control", "icon": "🛡️", "color": "#06b6d4", "desc": "Inspection Checkpoints", "url": "http://localhost:8069/odoo/quality"},
-    {"name": "Amazon Sync", "icon": "🛒", "color": "#f59e0b", "desc": "Marketplace Orders", "url": "http://localhost:8069/odoo/amazon"},
     {"name": "Local AI Suite", "icon": "🧠", "color": "#ec4899", "desc": "Ollama LLM Integration", "url": "http://localhost:8069/odoo/discuss"}
 ]
 

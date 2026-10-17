@@ -645,3 +645,194 @@
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* ==============================================================================
+   1.13 GLOBAL DROPDOWN NAVIGATION & ALL 18 APPLICATION LINKS
+   ============================================================================== */
+[data-theme="midnight-gold"] .dropdown-menu,
+[data-theme="midnight-gold"] .o-dropdown--menu,
+[data-theme="midnight-gold"] .o_navbar_apps_menu .dropdown-menu,
+[data-theme="midnight-gold"] .o_menu_sections .dropdown-menu,
+[data-theme="midnight-gold"] div[role="menu"] {
+  background: #141417 !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 20px rgba(245, 158, 11, 0.18) !important;
+  padding: 8px 6px !important;
+  backdrop-filter: blur(20px) !important;
+  color: #fef3c7 !important;
+}
+
+[data-theme="midnight-gold"] .dropdown-item,
+[data-theme="midnight-gold"] .o-dropdown-item,
+[data-theme="midnight-gold"] a.dropdown-item,
+[data-theme="midnight-gold"] button.dropdown-item {
+  color: #fef3c7 !important;
+  font-weight: 600 !important;
+  font-size: 13.5px !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  margin-bottom: 2px !important;
+  transition: all 0.15s ease !important;
+}
+
+[data-theme="midnight-gold"] .dropdown-item:hover,
+[data-theme="midnight-gold"] .dropdown-item:focus,
+[data-theme="midnight-gold"] a.dropdown-item:hover,
+[data-theme="midnight-gold"] a.dropdown-item:focus {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0.05) 100%) !important;
+  color: #ffffff !important;
+  border-left: 3px solid #f59e0b !important;
+  padding-left: 19px !important;
+  box-shadow: inset 0 0 10px rgba(245, 158, 11, 0.1) !important;
+}
+
+[data-theme="midnight-gold"] .dropdown-item.active,
+[data-theme="midnight-gold"] a.dropdown-item.active {
+  background: linear-gradient(90deg, #d97706, #b45309) !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* ==============================================================================
+   1.14 INDIVIDUAL STYLES FOR ALL 18 APPS SHOWN IN USER NAVIGATION
+   ============================================================================== */
+
+/* 1. Discuss (Chatter & Channels) */
+[data-theme="midnight-gold"] .o-mail-Discuss {
+  background: #09090b !important;
+}
+[data-theme="midnight-gold"] .o-mail-Discuss-sidebar {
+  background: #121214 !important;
+  border-right: 1px solid rgba(245, 158, 11, 0.2) !important;
+}
+[data-theme="midnight-gold"] .o-mail-DiscussCategory-item.active,
+[data-theme="midnight-gold"] .o-mail-DiscussCategory-item:hover {
+  background: rgba(245, 158, 11, 0.15) !important;
+  color: #ffffff !important;
+}
+
+/* 2. Calendar */
+[data-theme="midnight-gold"] .o_calendar_view,
+[data-theme="midnight-gold"] .fc,
+[data-theme="midnight-gold"] .fc-theme-standard td,
+[data-theme="midnight-gold"] .fc-theme-standard th {
+  background-color: #09090b !important;
+  border-color: rgba(245, 158, 11, 0.15) !important;
+  color: #fef3c7 !important;
+}
+[data-theme="midnight-gold"] .fc-event {
+  background: linear-gradient(135deg, #d97706, #92400e) !important;
+  border: 1px solid #f59e0b !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 3. To-do */
+[data-theme="midnight-gold"] .o_todo_view,
+[data-theme="midnight-gold"] .o_todo_kanban_card {
+  background: #141417 !important;
+  border: 1px solid rgba(245, 158, 11, 0.22) !important;
+  border-radius: 12px !important;
+}
+
+/* 4. Contacts */
+[data-theme="midnight-gold"] .o_res_partner_kanban .o_kanban_record {
+  background: #141417 !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+  border-radius: 12px !important;
+}
+
+/* 5. Helpdesk */
+[data-theme="midnight-gold"] .helpdesk_ticket_kanban .o_kanban_record {
+  border-left: 3px solid #f59e0b !important;
+}
+
+/* 6. Recruitment (Exact Page from Screenshot) */
+[data-theme="midnight-gold"] .o_hr_recruitment_kanban,
+[data-theme="midnight-gold"] .o_kanban_view .oe_kanban_global_click {
+  background: #141417 !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+  border-radius: 12px !important;
+}
+[data-theme="midnight-gold"] .ribbon,
+[data-theme="midnight-gold"] .ribbon-top-right,
+[data-theme="midnight-gold"] span.ribbon {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.6) !important;
+}
+[data-theme="midnight-gold"] .oe_kanban_action_button,
+[data-theme="midnight-gold"] a[name="action_get_attachment_tree_view"],
+[data-theme="midnight-gold"] button[name="action_get_attachment_tree_view"] {
+  color: #38bdf8 !important;
+  font-weight: 600 !important;
+}
+
+/* 7. Sales, Invoicing, Accounting & Purchase */
+[data-theme="midnight-gold"] .o_sale_order,
+[data-theme="midnight-gold"] .o_account_move,
+[data-theme="midnight-gold"] .o_purchase_order {
+  background: #09090b !important;
+}
+
+/* 8. Dashboards & Spreadsheets */
+[data-theme="midnight-gold"] .o_dashboard,
+[data-theme="midnight-gold"] .spreadsheet_dashboard {
+  background: #09090b !important;
+}
+[data-theme="midnight-gold"] .o_dashboard_card {
+  background: #141417 !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+/* 9. Point of Sale Launcher */
+[data-theme="midnight-gold"] .o_pos_kanban .o_kanban_record {
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  background: #141417 !important;
+}
+
+/* 10. Project & Timesheets */
+[data-theme="midnight-gold"] .o_timesheet_grid,
+[data-theme="midnight-gold"] .o_project_kanban {
+  background: #09090b !important;
+}
+[data-theme="midnight-gold"] .o_timesheet_plan_card {
+  background: #141417 !important;
+  border: 1px solid rgba(245, 158, 11, 0.2) !important;
+}
+
+/* 11. Website, eLearning, Email Marketing, Surveys, Inventory */
+[data-theme="midnight-gold"] .o_website_dashboard,
+[data-theme="midnight-gold"] .o_slides_course,
+[data-theme="midnight-gold"] .o_mass_mailing,
+[data-theme="midnight-gold"] .o_survey,
+[data-theme="midnight-gold"] .o_stock_picking_kanban {
+  background: #09090b !important;
+}
+
+/* 12. OdooBot Live Chat Popup (From Screenshot) */
+[data-theme="midnight-gold"] .o-mail-ChatWindow {
+  background: #141417 !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85), 0 0 20px rgba(245, 158, 11, 0.15) !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+[data-theme="midnight-gold"] .o-mail-ChatWindow-header {
+  background: #18181b !important;
+  border-bottom: 2px solid #d97706 !important;
+  color: #fef3c7 !important;
+}
+[data-theme="midnight-gold"] .o-mail-ChatWindow .o-mail-Message {
+  background: #1c1c20 !important;
+  border: 1px solid rgba(245, 158, 11, 0.15) !important;
+  color: #fafaf9 !important;
+}
+[data-theme="midnight-gold"] .o-mail-ChatWindow input {
+  background: #101012 !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  color: #ffffff !important;
+}
+
