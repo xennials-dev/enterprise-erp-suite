@@ -121,6 +121,19 @@
                     <div id="odoo-theme-cards-list">
                         ${cardsHtml}
                     </div>
+                    <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div style="font-size: 13px; font-weight: 600; color: #a5b4fc; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                            <span>🎬</span> Showcase Preview & System Walkthrough
+                        </div>
+                        <div style="display: flex; gap: 16px; align-items: center; background: rgba(0,0,0,0.3); padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                            <img src="/auto_login/static/src/img/odoo-showcase-preview.gif" style="width: 140px; height: auto; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" alt="Showcase Preview" />
+                            <div>
+                                <div style="font-size: 14px; font-weight: 600; color: #ffffff;">1080p Full HD Video Tour</div>
+                                <div style="font-size: 12px; color: #94a3b8; margin: 4px 0 8px 0;">30-second high-production walkthrough covering all 25+ apps, themes, and local AI.</div>
+                                <a href="https://odoo-local.vercel.app" target="_blank" style="display: inline-block; padding: 6px 14px; border-radius: 6px; background: #6366f1; color: #fff; font-size: 12px; font-weight: 600; text-decoration: none;">Watch Live on Vercel &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             `;
 
