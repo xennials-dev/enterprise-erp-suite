@@ -217,6 +217,22 @@ The desktop workspace will launch immediately without asking for a password or d
 
 ---
 
+## 🗄️ Database Seeds & Live CRM Customizations
+
+The repository contains full snapshots of all database records and customizations created on the live instance (`http://localhost:8069`):
+
+- **[`database/seeds/crm_leads.json`](database/seeds/crm_leads.json)**: Full structured export of all **49 active opportunities** ($1,085,044 total pipeline value), including Texas enterprise deals:
+  - *Dallas Financial Private AI Infrastructure* — **$120,000** (75% probability)
+  - *Enterprise Cloud Migration - Austin Energy* — **$85,000** (80% probability)
+  - *Fort Worth Industrial Automation Suite* — **$64,000** (85% probability)
+  - *Houston Medical Hub - Automated Billing & OCR* — **$45,000** (90% probability)
+  - *San Antonio Logistics - ERP Fleet Integration* — **$32,500** (70% probability)
+- **[`database/seeds/odoo_customizations.sql`](database/seeds/odoo_customizations.sql)**: Raw PostgreSQL table data dump (`crm_lead`, `crm_stage`, `discuss_channel`, `res_partner`, `res_company`) for instant restoration.
+- **[`database/seeds/installed_modules.json`](database/seeds/installed_modules.json)**: Manifest of all 173 installed modules and enterprise apps.
+- **[`database/seeds/discuss_channels.json`](database/seeds/discuss_channels.json)**: Configured communication channels (`#general`, `#sales`, `#board-meetings`, `#rd`, `#troubleshooting`).
+
+---
+
 ## 🎨 4 Modern Web Interface Options (Zero Breakage)
 
 The platform includes 4 distinct, non-destructive web interface themes that can be switched on the fly without breaking any Odoo components, forms, views, or business workflows.

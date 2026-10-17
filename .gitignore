@@ -29,3 +29,5 @@ Thumbs.db
 *.gguf
 *.bin
 models/downloads/
+
+.vercel

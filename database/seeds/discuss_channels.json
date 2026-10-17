@@ -1,0 +1,8 @@
+[{"id":2,"name":"Administrators","channel_type":"channel","description":"General channel for administrators."}, 
+ {"id":6,"name":"Welcome to the #general channel","channel_type":"channel","description":null}, 
+ {"id":7,"name":"Ideas & Suggestions","channel_type":"channel","description":null}, 
+ {"id":8,"name":"Troubleshooting","channel_type":"channel","description":null}, 
+ {"id":3,"name":"sales","channel_type":"channel","description":"Discussion about best sales practices and deals."}, 
+ {"id":4,"name":"board-meetings","channel_type":"channel","description":"Board meetings, budgets, strategic plans"}, 
+ {"id":5,"name":"rd","channel_type":"channel","description":"Research and development discussion group"}, 
+ {"id":1,"name":"general","channel_type":"channel","description":"General announcements for all employees."}]
