@@ -3,6 +3,7 @@
 *.env
 .env.local
 *.local
+.vercel
 !.env.example
 
 # Docker persistent local volumes and data
