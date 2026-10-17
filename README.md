@@ -9,6 +9,16 @@ A modern, blank-canvas, white-label Enterprise Resource Planning (ERP) and busin
 
 ---
 
+## 🎬 1080p Video Walkthrough & Portfolio Demo
+
+> [!TIP]
+> **Showcase MP4 Ready for Upwork & GitHub**:
+> A high-production 30-second portfolio video compiled via HyperFrames and Remotion standards showcasing all 25+ pre-activated applications, 100% on-premise AI workflows (NL-to-SQL, Smart Invoice OCR, Helpdesk Tier-1), and 4 non-destructive web interface themes.
+>
+> 📹 **Download & Watch**: [`docs/videos/odoo-enterprise-showcase.mp4`](docs/videos/odoo-enterprise-showcase.mp4) *(6.2 MB, 1080p Full HD, ready for Upwork Portfolio upload and GitHub Release embedding)*
+
+---
+
 ## 📊 Platform Architecture & Core Features
 
 ![YOUR COMPANY Enterprise Business Suite Architecture](docs/images/enterprise_suite_infographic.jpg)
