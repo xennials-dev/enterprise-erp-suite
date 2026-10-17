@@ -2,6 +2,8 @@
 
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Vercel](https://img.shields.io/badge/Vercel-Live%20Portal-000000?logo=vercel&logoColor=white)](https://odoo-local.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white)](https://github.com/xennials-dev/enterprise-erp-suite)
 [![License](https://img.shields.io/badge/License-LGPL--3-blue.svg)](LICENSE)
 [![Deployment](https://img.shields.io/badge/Status-Self--Hosted%20%7C%20Localhost-success)]()
 
